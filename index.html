@@ -27,6 +27,7 @@
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 bg-light ">
               <h1 class="text-center fs-1 fw-bold mb-4 text-info">Income & Saving Count</h1>
+              <span class="text-center fs-3 fw-bold text-danger" id="warning-msg"></span>
                 <div class="input-group mb-3">
                     <span class="input-group-text fs-3 fw-bold" id="inputGroup-sizing-default">Income</span>
                     <input id="income-input-field" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
@@ -54,6 +55,10 @@
                     <input type="number" class="form-control w-25" placeholder="20">
                     <span class="fs-3 p-3">%</span>
                     <button id="save" type="button" class="btn btn-info btn-lg">Save</button>
+                </div>
+                <div class="mt-5">
+                    <h3  class="fs-3 fw-bold text-center">Saving Amount:$<span id="saving-amount">1200</span></h3>
+                    <h3 class="fs-3 fw-bold text-center">Remaining Balance:$<span  id="remaining-balance">1200</span></h3>
                 </div>
             </div>
         </div>
