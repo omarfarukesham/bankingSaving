@@ -20,12 +20,41 @@
 <body>
     <div class="container mt-3">
         <h1 class="text-center fs-1 fw-bold ">Self Accounting</h1>
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-6 col-md-12 col-sm-12">
-                <img src="images/money.jpg" alt="">
+              
+              <img src="./images/money.jpg" alt="" class="img-fluid">
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                
+            <div class="col-lg-6 col-md-12 col-sm-12 bg-light ">
+              <h1 class="text-center fs-1 fw-bold mb-4 text-info">Income & Saving Count</h1>
+                <div class="input-group mb-3">
+                    <span class="input-group-text fs-3 fw-bold" id="inputGroup-sizing-default">Income</span>
+                    <input id="income-input-field" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <h2 class="text-center fs-2 fw-bold">Expences</h2>
+                <div class="input-group mb-3">
+                    <span class="input-group-text fs-3 fw-bold" id="inputGroup-sizing-default">Food</span>
+                    <input id="food-input-field" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text fs-3 fw-bold" id="inputGroup-sizing-default">Rent</span>
+                    <input id="rent-input-field" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text fs-3 fw-bold" id="inputGroup-sizing-default">Cloths</span>
+                    <input id="cloth-input-field" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <button id="submit" type="button" class="btn btn-info btn-lg">Calculate</button>
+                <div class="mt-5">
+                    <h3  class="fs-3 fw-bold text-center">Total Expences:$<span id="total-expences">1200</span></h3>
+                    <h3 class="fs-3 fw-bold text-center">Balance Amount:$<span  id="balance">1200</span></h3>
+                </div>
+                <div class="d-flex mt-5 justify-content-center align-content-center">
+                    <span class="fs-3 fw-bold p-3">Save:</span>
+                    <input type="number" class="form-control w-25" placeholder="20">
+                    <span class="fs-3 p-3">%</span>
+                    <button id="save" type="button" class="btn btn-info btn-lg">Save</button>
+                </div>
             </div>
         </div>
     </div>
