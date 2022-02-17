@@ -12,9 +12,8 @@ function inputFieldValidation(){
         const msg = document.getElementById('error-msg')
         msg.innerHTML = ' OPP! Negative value is not allow'
     }
-    
-
 }
+
 
 function getInputValue(){
     
@@ -32,31 +31,59 @@ function getInputValue(){
     
     const totalCosting = foodParseAmount + rentParseAmount + clothParseAmount
 
-    if(totalCosting > parseIncomeAmount){
+    if( totalCosting > parseIncomeAmount){
         const msg = document.getElementById('error-msg')
         msg.innerHTML = 'Your Income is limited, Reduce cost'
     }else{
-        const getCostingFieldId = document.getElementById('total-cost')
-              getCostingFieldId.innerText = totalCosting
+            const getCostingFieldId = document.getElementById('total-cost')
+             getCostingFieldId.innerText = totalCosting
+             const getBalanceId = document.getElementById('balance')
+             const balance = parseIncomeAmount - totalCosting
+                 getBalanceId.innerText = balance
+            
+            }
+    
+              
 
-        const getBalanceId = document.getElementById('balance')
-        const balance = parseIncomeAmount - totalCosting
-              getBalanceId.innerText = balance
-    }
+    
    
 }
 
-document.getElementById('submit').addEventListener('click',function(){
-    
+//saving add eventlistener code here 
+document.getElementById('submit').addEventListener('click',function(){  
     inputFieldValidation()
     getInputValue()
-    // total costing amount permonth and deploy to the costin field code here
-  
+   
+})
+
+function savingValidity(){
+    const getIncomeAmount = document.getElementById('income-input-field').value
+    const getSavingPercent = document.getElementById('saving-input-field').value
+    if(getIncomeAmount == '' || getSavingPercent == '' || getIncomeAmount < 0 || getSavingPercent < 0){
+       console.log(alert('Saving and Income should keep a positive value'))
+    }else{
+       
+        const incomeParseAmount = parseFloat(getIncomeAmount)
+        const savingParseAmount = parseFloat(getSavingPercent)
+      
+        const savingCalculation = incomeParseAmount * (savingParseAmount)/100
+        const remainingCalculation = incomeParseAmount - savingCalculation
     
-    // balance amount which is input income field
+        const savingAmount = document.getElementById('saving-amount')
+              savingAmount.innerText = savingCalculation;
+    
+        const remainingAmount = document.getElementById('remaining-balance')
+            remainingAmount.innerText = remainingCalculation;
+    }
+}
+//saving add eventlistener code here 
+document.getElementById('saving-btn').addEventListener('click', function(){
+        savingValidity()
+       
+    
+    
+
+   
 
 
-    // deploy total value to the costing area
-    
-    
 })
